@@ -19,6 +19,7 @@ runs:
   using: "composite"
   steps:
     - name: Install OpenVPN
+      shell: bash
       run: sudo apt-get install -y openvpn
 
     - name: Create VPN config and auth files if needed
@@ -66,4 +67,5 @@ runs:
 
     - name: Fail the Job if no VPN connection
       if: steps.check-vpn-status.outcome == 'failure'
+      shell: bash
       run: exit 1

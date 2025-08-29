@@ -1,6 +1,6 @@
 # GitHubAction-OpenVPN
 
-This project provides a GitHub Action workflow for managing and deploying OpenVPN configurations. It is designed to automate the setup and maintenance of OpenVPN servers and clients.
+This project provides a GitHub Action workflow for managing and deploying OpenVPN configurations. It is designed to automate the setup and maintenance of OpenVPN clients.
 
 ## Features
 
@@ -17,24 +17,25 @@ This project provides a GitHub Action workflow for managing and deploying OpenVP
 
 ## Usage
 
-1. Clone this repository:
-    ```bash
-    git clone https://github.com/your-username/GitHubAction-OpenVPN.git
-    ```
-2. Configure the workflow file in `.github/workflows/openvpn.yml`.
-3. Commit and push the changes:
-    ```bash
-    git add .
-    git commit -m "Add OpenVPN workflow"
-    git push origin main
-    ```
-4. Monitor the workflow execution in the GitHub Actions tab.
 
-## Configuration
+    ```bash
+       steps:
+    - name: Connect to OpenVPN
+      uses: secouvreur/GitHubAction-OpenVPN@v0.0.1
+      with:
+        vpn_config: ${{ secrets.VPN_CONFIG }}
+        vpn_username: ${{ secrets.VPN_USERNAME }}
+        vpn_password: ${{ secrets.VPN_PASSWORD }}
+    ```
 
-Update the `openvpn.yml` file with the required parameters:
-- **Server IP**: The IP address of your OpenVPN server.
-- **Client Names**: List of client configurations to generate.
+    ## Arguments
+
+    | Argument       | Description                          | Required | Default Value |
+    |----------------|--------------------------------------|----------|---------------|
+    | `vpn_config`   | OpenVPN configuration file content. | Yes      | None          |
+    | `vpn_username` | Username for OpenVPN authentication.| NO      | None          |
+    | `vpn_password` | Password for OpenVPN authentication.| NO      | None          |
+    | `timeout`.     | VPN connection timeout             .| NO      | 15(sec)       |
 
 ## License
 
