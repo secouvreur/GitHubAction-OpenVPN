@@ -16,17 +16,23 @@ This project provides a GitHub Action workflow for managing and deploying OpenVP
 - Access to a server for hosting OpenVPN.
 
 ## Usage
-### YAML
+Remove the `auth-user-pass` line from your OpenVPN configuration file.
 
 ```yaml
 steps:
 - name: Connect to OpenVPN
     uses: secouvreur/GitHubAction-OpenVPN@v0.0.1
     with:
-    vpn_config: ${{ secrets.VPN_CONFIG }}
-    vpn_username: ${{ secrets.VPN_USERNAME }}
-    vpn_password: ${{ secrets.VPN_PASSWORD }}
+        vpn_config: ${{ secrets.VPN_CONFIG }}
+        vpn_username: ${{ secrets.VPN_USERNAME }}
+        vpn_password: ${{ secrets.VPN_PASSWORD }}
 ```
+
+### Security Note
+To ensure sensitive data such as configuration, username, and password are securely managed:
+- Use GitHub Actions secrets to store sensitive information.and password as inputs using the `vpn_username` and `vpn_password` arguments.
+- Avoid hardcoding sensitive data directly in your workflow or configuration files.
+
 
 ### Arguments
 <table>
