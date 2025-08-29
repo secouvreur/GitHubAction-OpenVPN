@@ -34,10 +34,6 @@ steps:
         vpn_password: ${{ secrets.VPN_PASSWORD }}
 ```
 
-### Security Note
-Use **GitHub Actions secrets** to store sensitive information such as `vpn_config`, `vpn_username` and `vpn_password`.
-
-
 ### Arguments
 <table>
   <thead>
