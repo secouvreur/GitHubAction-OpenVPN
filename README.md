@@ -16,26 +16,27 @@ This project provides a GitHub Action workflow for managing and deploying OpenVP
 - Access to a server for hosting OpenVPN.
 
 ## Usage
+### YAML
 
+```yaml
+    steps:
+- name: Connect to OpenVPN
+    uses: secouvreur/GitHubAction-OpenVPN@v0.0.1
+    with:
+    vpn_config: ${{ secrets.VPN_CONFIG }}
+    vpn_username: ${{ secrets.VPN_USERNAME }}
+    vpn_password: ${{ secrets.VPN_PASSWORD }}
+```
 
-    ```bash
-       steps:
-    - name: Connect to OpenVPN
-      uses: secouvreur/GitHubAction-OpenVPN@v0.0.1
-      with:
-        vpn_config: ${{ secrets.VPN_CONFIG }}
-        vpn_username: ${{ secrets.VPN_USERNAME }}
-        vpn_password: ${{ secrets.VPN_PASSWORD }}
-    ```
-
-    ## Arguments
-
-    | Argument       | Description                          | Required | Default Value |
-    |----------------|--------------------------------------|----------|---------------|
-    | `vpn_config`   | OpenVPN configuration file content. | Yes      | None          |
-    | `vpn_username` | Username for OpenVPN authentication.| NO      | None          |
-    | `vpn_password` | Password for OpenVPN authentication.| NO      | None          |
-    | `timeout`.     | VPN connection timeout             .| NO      | 15(sec)       |
+### Arguments
+```markdown
+| Argument       | Description                          | Required | Default Value |
+|----------------|--------------------------------------|----------|---------------|
+| `vpn_config`   | OpenVPN configuration file content. | Yes      | None          |
+| `vpn_username` | Username for OpenVPN authentication.| NO      | None          |
+| `vpn_password` | Password for OpenVPN authentication.| NO      | None          |
+| `timeout`.     | VPN connection timeout             .| NO      | 15(sec)       |
+```
 
 ## License
 
