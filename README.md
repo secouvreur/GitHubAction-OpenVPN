@@ -29,42 +29,42 @@ steps:
 ```
 
 ### Arguments
-<div align="center">
-
 <table>
-  <tr>
-    <td>Argument</td>
-    <td>Description</td>
-    <td>Required</td>
-    <td>Default Value</td>
-  </tr>
-  <tr>
-    <td>vpn_config</td>
-    <td>OpenVPN configuration file content</td>
-    <td>Yes</td>
-    <td>None</td>
-  </tr>
-  <tr>
-    <td>vpn_username</td>
-    <td>Username for OpenVPN authentication</td>
-    <td>No</td>
-    <td>None</td>
-  </tr>
-  <tr>
-    <td>vpn_password</td>
-    <td>Password for OpenVPN authentication</td>
-    <td>No</td>
-    <td>None</td>
-  </tr>
-  <tr>
-    <td>timeout</td>
-    <td>VPN connection timeout in seconds</td>
-    <td>No</td>
-    <td>15</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Default Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>vpn_config</td>
+        <td>OpenVPN configuration file content</td>
+        <td>Yes</td>
+        <td>None</td>
+    </tr>
+    <tr>
+        <td>vpn_username</td>
+        <td>Username for OpenVPN authentication</td>
+        <td>No</td>
+        <td>None</td>
+    </tr>
+    <tr>
+        <td>vpn_password</td>
+        <td>Password for OpenVPN authentication</td>
+        <td>No</td>
+        <td>None</td>
+    </tr>
+    <tr>
+        <td>timeout</td>
+        <td>VPN connection timeout in seconds</td>
+        <td>No</td>
+        <td>15</td>
+    </tr>
+  </tbody>
 </table>
-
-</div>
 
 ## License
 
