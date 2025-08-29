@@ -1,5 +1,6 @@
 name: 'OpenVPN Connect'
 description: 'Connect to OpenVPN using provided config and credentials'
+author: "secouvreur"
 inputs:
   vpn_config:
     description: 'OpenVPN config file content'
