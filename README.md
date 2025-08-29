@@ -19,7 +19,7 @@ This project provides a GitHub Action workflow for managing and deploying OpenVP
 ### YAML
 
 ```yaml
-    steps:
+steps:
 - name: Connect to OpenVPN
     uses: secouvreur/GitHubAction-OpenVPN@v0.0.1
     with:
@@ -29,14 +29,42 @@ This project provides a GitHub Action workflow for managing and deploying OpenVP
 ```
 
 ### Arguments
-```markdown
-| Argument       | Description                          | Required | Default Value |
-|----------------|--------------------------------------|----------|---------------|
-| `vpn_config`   | OpenVPN configuration file content. | Yes      | None          |
-| `vpn_username` | Username for OpenVPN authentication.| NO      | None          |
-| `vpn_password` | Password for OpenVPN authentication.| NO      | None          |
-| `timeout`.     | VPN connection timeout             .| NO      | 15(sec)       |
-```
+<div align="center">
+
+<table>
+  <tr>
+    <td>Argument</td>
+    <td>Description</td>
+    <td>Required</td>
+    <td>Default Value</td>
+  </tr>
+  <tr>
+    <td>vpn_config</td>
+    <td>OpenVPN configuration file content</td>
+    <td>Yes</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td>vpn_username</td>
+    <td>Username for OpenVPN authentication</td>
+    <td>No</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td>vpn_password</td>
+    <td>Password for OpenVPN authentication</td>
+    <td>No</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td>timeout</td>
+    <td>VPN connection timeout in seconds</td>
+    <td>No</td>
+    <td>15</td>
+  </tr>
+</table>
+
+</div>
 
 ## License
 
